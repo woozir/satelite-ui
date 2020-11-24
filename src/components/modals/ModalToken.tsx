@@ -25,7 +25,7 @@ const ModalToken: React.FC<IModelTokenProps> = ({ showModal, close, saveToken })
     }
   };
   return (
-    <IonModal isOpen={showModal} showBackdrop cssClass="modalToken">
+    <IonModal isOpen={showModal} showBackdrop backdropDismiss={false} cssClass="modalToken">
       <IonHeader>
         <IonToolbar>
           <IonTitle>Woozir</IonTitle>
