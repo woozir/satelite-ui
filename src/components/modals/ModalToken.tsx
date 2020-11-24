@@ -34,6 +34,7 @@ const ModalToken: React.FC<IModelTokenProps> = ({ showModal, close, saveToken })
         <IonItem>
           <IonLabel position="floating">Entre le mot de passe :</IonLabel>
           <IonInput
+            type="password"
             value={token}
             onIonChange={(e) => {
               setToken(e.detail.value!);
