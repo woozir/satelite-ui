@@ -1,6 +1,5 @@
 import React from "react";
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
 import { useQuery } from "react-query";
 import API from "../axios";
 import UsersCount from "../components/dashboard/UsersCount";
