@@ -22,6 +22,7 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import API from "./axios";
 import Dashboard from "./pages/Dashboard";
 import Admin from "./pages/Admin";
 import { QueryCache, ReactQueryCacheProvider } from "react-query";
@@ -45,13 +46,16 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const loadToken = async () => {
-      await Storage.get({ key: "token" });
-      setToken(token);
+      try {
+        await Storage.get({ key: "token" });
+        //TODO: implement route to validate token
+        await API.get("/users");
+        setToken(token);
+      } catch (e) {
+        setShowModal(true);
+      }
     };
     loadToken();
-    if (token === "") {
-      setShowModal(true);
-    }
   }, [token]);
 
   return (
