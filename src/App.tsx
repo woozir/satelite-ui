@@ -22,6 +22,8 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import "./assets/main.css";
+
 import API from "./axios";
 import Dashboard from "./pages/Dashboard";
 import Admin from "./pages/Admin";
@@ -36,8 +38,8 @@ const App: React.FC = () => {
   const [token, setToken] = useState("");
 
   const saveToken = async (token: string) => {
-    await Storage.set({ key: "token", value: token });
     setToken(token);
+    await Storage.set({ key: "token", value: token });
   };
 
   const close = () => {

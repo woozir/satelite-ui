@@ -28,10 +28,11 @@
     "typescript": "3.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run watch:css && react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,7 +50,10 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "2.4.3"
+    "@capacitor/cli": "2.4.3",
+    "autoprefixer": "^10.0.2",
+    "postcss-cli": "^8.3.0",
+    "tailwindcss": "^2.0.1"
   },
   "description": "An Ionic project"
 }

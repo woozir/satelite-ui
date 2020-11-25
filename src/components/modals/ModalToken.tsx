@@ -44,7 +44,9 @@ const ModalToken: React.FC<IModelTokenProps> = ({ showModal, close, saveToken })
         </IonItem>
       </IonHeader>
 
-      <IonButton onClick={() => validate()}>Je me connecte</IonButton>
+      <IonButton type="submit" onClick={() => validate()}>
+        Je me connecte
+      </IonButton>
     </IonModal>
   );
 };
