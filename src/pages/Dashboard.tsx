@@ -36,7 +36,7 @@ const Dashboard: React.FC = () => {
 
     const usersPresent = data.filter((user) => user.present);
     return (
-      <IonPage className="max-h-full text-center">
+      <IonPage className="max-h-full">
         <IonHeader>
           <IonToolbar>
             <IonTitle>Dashboard</IonTitle>
