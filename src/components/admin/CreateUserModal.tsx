@@ -30,6 +30,7 @@ const CreateUserModal: React.FC<IEditCreateModalProps> = ({ isOpen, close }) => 
   const [createAction] = useMutation(createUser, {
     onSuccess: () => {
       cache.invalidateQueries("users");
+      setUsername("");
       close();
     },
   });
