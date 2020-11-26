@@ -3,7 +3,6 @@ import { IonCol, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } fro
 import { useQuery } from "react-query";
 import API from "../axios";
 import UsersCount from "../components/dashboard/UsersCount";
-import "./Dashboard.css";
 import UsersPresent from "../components/dashboard/UsersPresent";
 import ResponsiveIonContent from "../components/ResponsiveIonContent";
 

@@ -22,7 +22,7 @@ class API {
   }
   async put(url: string, payload: any): Promise<AxiosResponse> {
     const token = await this.getToken();
-    return this.instance.post(url, payload, { headers: { sectoken: token.value } });
+    return this.instance.put(url, payload, { headers: { sectoken: token.value } });
   }
   async delete(url: string): Promise<AxiosResponse> {
     const token = await this.getToken();

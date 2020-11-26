@@ -1,6 +1,7 @@
 import React from "react";
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+import { IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import ResponsiveIonContent from "../components/ResponsiveIonContent";
+import UsersList from "../components/admin/UsersList";
 
 const Admin: React.FC = () => {
   return (
@@ -10,14 +11,14 @@ const Admin: React.FC = () => {
           <IonTitle>Admin</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <ResponsiveIonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Admin</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Admin page" />
-      </IonContent>
+        <UsersList />
+      </ResponsiveIonContent>
     </IonPage>
   );
 };
