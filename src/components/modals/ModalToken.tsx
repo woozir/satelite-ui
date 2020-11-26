@@ -30,7 +30,10 @@ const ModalToken: React.FC<IModelTokenProps> = ({ showModal, close, saveToken })
         <IonToolbar>
           <IonTitle>Woozir</IonTitle>
         </IonToolbar>
-        <Logo className="logo" />
+        <div>
+          <Logo className="logo m-auto" />
+        </div>
+
         <IonItem>
           <IonLabel position="floating">Entre le mot de passe :</IonLabel>
           <IonInput
